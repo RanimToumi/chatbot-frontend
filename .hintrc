@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-moz-backface-visibility",
+          "-moz-user-select",
+          "-webkit-text-size-adjust",
+          "text-align: -webkit-match-parent"
+        ]
+      }
+    ],
+    "no-inline-styles": "off"
+  }
+}

@@ -1,0 +1,13 @@
+.logo-and-title h1{
+  padding: 32px;
+  color: rgba(239, 243, 247, 0.936);
+  font-style: italic;
+  font-family:Cambria;
+  font-size: 34px;
+
+
+}
+
+.nav .scroll-to-section{
+  margin-top: -100px;
+}

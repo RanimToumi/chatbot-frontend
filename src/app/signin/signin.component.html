@@ -1,0 +1,77 @@
+<section class="sign">
+  <div class="wrapper">
+    <!-- {{authForm.value | json }} -->
+    <form #authForm="ngForm" action="" id="wizard" class="form" (ngSubmit)="authentificate(authForm)">
+    <!-- SECTION 1 -->
+
+        <section class="form-box">
+            <div class="inner">
+
+              <div class="image-container">
+
+                <img src=".\assets\images\pngtre.png" alt="Description de l'image">
+              </div>
+
+              <div class="form-row">
+                <div class="form-holder">
+                    <i class="bi bi-envelope-fill"></i>
+                  <input type="email" class="form-control" placeholder="Email" [(ngModel)]="patient.email" name="email"   required >
+
+                  <p style="margin: 7px 10px; color: rgb(157, 157, 157);font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">We'll never share your emal with anyone else</p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-lg-12 form-holder">
+
+                          <i class="bi bi-key"></i>
+                      <input type="password" class="form-control" placeholder="Password"  name="password" required minlength="6" [(ngModel)]="patient.password">
+                      <a routerLink="#" class="forget_btn">Forgotten password?</a>
+
+              </div>
+
+            </div>
+              <div class="flex-sb-m w-full p-t-3 p-b-32">
+                <div class="contact100-form-checkbox">
+                  <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                  <label class="label-checkbox100" for="ckb1">
+                    Remember me
+                  </label>
+                </div>
+
+              </div>
+
+              <button type="submit" class="btn btn-success d-inline-block mr-2" [disabled]="!authForm.valid">Sign In</button>
+
+              <div class="text">
+              <p>Don’t have an account yet? <a routerLink="/signup">Sign up here</a> </p>
+
+
+
+              <div class="block-item right" style="align-items:4px;padding-top: 5px;" >
+                <p style="margin:20px 210px ;color: rgb(139, 139, 136); font-size:16px;">Sign in with:</p>
+                <div class = "row" style="padding-top: 10px; ">
+                  <div class=" col"> <img src=".\assets\images\Facebook_f_logo_(2019).svg.webp" alt="facebook-f" ></div>
+                  <div class=" col"> <img src=".\assets\images\microsoft.png" alt="Microsoft"></div>
+                  <div class=" col"> <img src=".\assets\images\2991148.png" alt="google" ></div>
+              </div>
+
+              </div>
+
+            </div>
+
+              </div>
+            </section>
+          </form>
+        </div>
+
+        <div class="footer" >
+          <p>© 2023 All Rights Reserved by <a routerLink="index.html">HealthMatchCare</a></p>
+      </div>
+
+</section>
+
+
+
+
+

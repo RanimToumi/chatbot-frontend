@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="section section-left">
+
+  <form   #signupForm="ngForm" action="" id="wizard" class="form" (ngSubmit)="onAddPatient(signupForm)">
+  <!-- SECTION 1 -->
+
+      <section class="form-box">
+        <h2><strong> Register account Form</strong> </h2>
+          <div class="inner">
+
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" class="form-control" name="firstname"  placeholder="Firstname" *ngIf="patient" [(ngModel)]="patient.firstname" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="text" class="form-control" name="lastname" placeholder="Lastname" *ngIf="patient" [(ngModel)]="patient.lastname" required >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="email" class="form-control" name="email" placeholder="Email" *ngIf="patient" [(ngModel)]="patient.email"  required email>
+
+
+                <p style="margin: 7px 10px; color: rgb(157, 157, 157);font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">We'll never share your emal with anyone else</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-holder">
+                <input type="password" class="form-control" name="password"  placeholder="Password"  *ngIf="patient" [(ngModel)]="patient.password"  required minlength="6">
+              </div>
+            </div>
+
+
+            <div class="form-row">
+              <div class="col-lg-12 form-holder">
+                <input type="password" class="form-control" name="confirm_Password" placeholder="Confirm password" *ngIf="patient" [(ngModel)]="patient.confirm_Password" (blur)="onConfirmPasswordBlur()" required>
+                <div *ngIf="passwordMatchError" style="color: red;">Passwords don't match</div>
+
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success d-inline-block mr-2" [disabled]="(!signupForm.valid)||passwordMatchError" >Register</button>
+
+             <p>Already have an account?  <a routerLink="/signin">Sign in</a></p>
+            </div>
+
+          </section>
+        </form>
+      </div>
+      <div class="section section-right">
+        <img src=".\assets\images\Chatbot.png" alt="signup">
+      </div>
+ </div>
+ <div class="footer" >
+  <p>© 2023 All Rights Reserved by <a routerLink="index.html">HealthMatchCare</a></p>
+</div>
+
